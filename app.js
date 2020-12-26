@@ -8,11 +8,17 @@ const app = express();
 //Views--------------
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+require('./configs/hbs.config');
 
 
-//Routes-------------
+//Router-------------
 const router = require('./configs/router.config');
 app.use('/', router);
+
+app.use((req, res, next) => {
+    res.locals.path = req.path;
+    next();
+});
 
 
 const port = process.env.PORT || 3000;
