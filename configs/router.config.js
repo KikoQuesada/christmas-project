@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.get('/home', common.home);
 router.get('/posts', posts.list);
+router.get('/new', posts.new);
 
 module.exports = router;

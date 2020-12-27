@@ -1,0 +1,23 @@
+<section>
+  <h1>New post</h1>
+  <form action="/posts" method="POST">
+    <div class="form-group mb-3">
+      <label for="title">Title</label>
+      <input name="title" type="text" class="form-control" id="title" placeholder="The title of your post" value="">
+    </div>
+
+    <div class="mb-3 form-group">
+        <label for="formFile" class="form-label">Upload your image!</label>
+        <input class="form-control" name="image" type="file" id="image">
+    </div>
+
+    <div class="form-group mb-3" > 
+      <label for="text">Text</label>
+      <textarea name="text" type="text" class="form-control" id="text" placeholder="Write your review!" rows="10"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      New Post
+    </button>
+  </form>
+</section>
