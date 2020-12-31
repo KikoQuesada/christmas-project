@@ -10,6 +10,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 require('./configs/hbs.config');
 
+//Configure body parser
+app.use(express.urlencoded({ extended: true}));
+
 
 //Router-------------
 const router = require('./configs/router.config');

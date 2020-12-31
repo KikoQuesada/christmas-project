@@ -1,11 +1,10 @@
-{{#each postsModel as |post|}}
-    {{#with posts}}
-        <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+{{#each posts as |post| }}
+    {{#with post }}
+        <div class="card mb-3">
+            <img src={{ post.image }} class="card-img-top" alt="post-image">
             <div class="card-body">
-                <h5 class="card-title">{{title}}</h5>
-                <p class="card-text">{{text}}</p>
-                <a href="#" class="btn btn-primary">Read more</a>
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">{{post.text}}</p>
             </div>
         </div>
     {{/with}}

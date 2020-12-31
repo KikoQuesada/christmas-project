@@ -1,16 +1,18 @@
 const { post } = require('../configs/router.config');
-const postsModel = require('../models/post.model');
+const posts = require('../models/post.model');
 
 module.exports.list = (req, res, next) => {
-
-    const post = postsModel;
-
     res.render('posts/list', {
-        posts: post.find,
-        title: post.title
+        posts: posts
     });
 };
 
 module.exports.new = (req, res, next) => {
     res.render('posts/new');
+};
+
+module.exports.create = (req, res, next) => {
+    const { title, image, text } = req.body;
+    post.push(newPost);
+    res.redirect('/posts');
 };
